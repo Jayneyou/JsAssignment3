@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalItemsCounter = document.getElementById('total-items');
     const completedItemsCounter = document.getElementById('completed-items');
     const deletedItemsCounter = document.getElementById('deleted-items');
-
     let totalItems = 0;
     let completedItems = 0;
     let deletedItems = 0;
@@ -61,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // ---------------------- create checkbox
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
+
         // -------------------append items to the list
         todoItem.appendChild(checkbox);
         todoItem.appendChild(label);
