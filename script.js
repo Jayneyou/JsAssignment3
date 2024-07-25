@@ -58,6 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const label = document.createElement('label');
         label.textContent = todoText;
 
+        // ---------------------- create checkbox
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
         // -------------------append items to the list
         todoItem.appendChild(checkbox);
         todoItem.appendChild(label);
@@ -66,15 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // ----------clear the input field
         inputField.value = '';
-        
+
         addSound.play();
         totalItems++;
         reorderTodoList();
         updateCounters();
-
-        // ---------------------- checkbox
-        const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
 
         // --------------------checkbox event listener
         checkbox.addEventListener('change', () => {
